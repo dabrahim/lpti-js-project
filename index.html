@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess The Flag</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+<div id="wrapper">
+    <div id="game">
+        <div>
+            <img src="" alt="pays" id="img-pays">
+            <div id="chrono">0H 0mn 0s</div>
+        </div>
+        <div>
+            <select id="liste-pays">
+            </select>
+        </div>
+        <div>
+            <button id="btn-valider">Valider</button>
+        </div>
+    </div>
+    <img src="./static/assets/icons/settings.png" alt="Fermer" id="open-settings-img">
+</div>
+<div id="layer" hidden>
+    <div id="game-config">
+        <h3>Durée</h3>
+        <input type="text" placeholder="Heures" id="input-heures">
+        <input type="text" placeholder="Minutes" id="input-minutes">
+        <input type="text" placeholder="Secondes" id="input-secondes">
+        <h3>Nombre de pays</h3>
+        <input type="number" placeholder="2 - 10" id="input-nb-pays"><br>
+        <button id="btn-save-config">Enregistrer configuration</button>
+        <h3>Calcul du score</h3>
+        <p>Indiquez la formule de calcul avec les opérateurs et les variables suivantes: </p>
+        <ul>
+            <li><strong>da:</strong> Durée autorisée</li>
+            <li><strong>dj:</strong> Durée jouée</li>
+            <li><strong>nrc:</strong> Nombre de réponses correctes</li>
+            <li><strong>nq:</strong> Nombre de questions</li>
+        </ul>
+        <p>Exemple: <strong>1000*(nrc/nq*100) + 200*(da/dj*100)</strong></p>
+        <input type="text" placeholder="formule de calcule">
+    </div>
+    <img src="./static/assets/icons/close.png" alt="Fermer" id="close-img">
+</div>
+<script type="application/javascript" src="static/js/game.js"></script>
+</body>
+</html>
